@@ -6,9 +6,15 @@ const DEV_API_FALLBACK = (() => {
   return 'http://localhost:3002';
 })();
 
-const API_BASE = import.meta.env.DEV
-  ? ((import.meta.env.VITE_API_BASE_URL as string | undefined) || DEV_API_FALLBACK)
-  : 'https://phenomenon-specification-picking-hansen.trycloudflare.com';
+const API_BASE = (() => {
+  if (import.meta.env.DEV) {
+    return (import.meta.env.VITE_API_BASE_URL as string | undefined) || DEV_API_FALLBACK;
+  }
+  return (
+    (import.meta.env.VITE_API_BASE_URL as string | undefined) ||
+    'https://phenomenon-specification-picking-hansen.trycloudflare.com'
+  );
+})();
 
 export function getToken() {
   return localStorage.getItem("duitin_token") || "";

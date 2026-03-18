@@ -1,0 +1,32 @@
+# Routes coding checklist
+
+- [x] /login -> Login
+- [x] / -> Layout
+- [x] /tasks -> JobMarket
+- [x] /jobs -> RedirectToTasks
+- [x] /withdrawal -> Withdrawal
+- [x] /profile -> Profile
+- [x] /edit-profile -> EditProfile
+- [x] /invite -> Invite
+- [x] /watch-video -> WatchVideo
+- [x] /survey -> Survey
+- [x] /download-app -> DownloadApp
+- [x] /product-review -> ProductReview
+- [x] /my-wallet -> MyWallet
+- [x] /withdrawal-history -> WithdrawalHistory
+- [x] /task-history -> TaskHistory
+- [x] /help -> Help
+- [x] /terms-privacy -> TermsPrivacy
+- [x] /customer-service -> CustomerService
+- [x] /chat-history -> ChatHistory
+- [x] /submit-ticket -> SubmitTicket
+- [x] /rate-service -> RateService
+- [x] /forgot-password -> ForgotPassword
+- [x] /services -> Services
+- [x] /task-detail -> TaskDetail
+- [x] /withdraw-success -> WithdrawSuccess
+- [x] /history -> History
+- [x] /notifications -> Notifications
+- [x] /settings -> Settings
+- [x] /delete-account -> DeleteAccount
+- [x] /vip-task-detail -> VIPTaskDetail

@@ -178,10 +178,17 @@ app.use(
     origin: [
       "https://duitin-app-from-archive.vercel.app",
       "https://duitin-app-from-archive-git-main.vercel.app",
+      "https://duitin-app-from-archive-2f4h5ed3t-fubos-projects-8712a2ef.vercel.app",
       "https://phenomenon-specification-picking-hansen.trycloudflare.com",
     ],
     methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
-    allowedHeaders: ["Content-Type", "Authorization"],
+    allowedHeaders: [
+      "Content-Type",
+      "Authorization",
+      "x-reset-at",
+      "x-admin-key",
+      "x-requested-with",
+    ],
     credentials: true,
   }),
 );

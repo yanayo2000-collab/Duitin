@@ -173,7 +173,18 @@ function getWalletView(db, userId, resetAt = 0) {
 }
 
 const app = express();
-app.use(cors());
+app.use(
+  cors({
+    origin: [
+      "https://duitin-app-from-archive.vercel.app",
+      "https://duitin-app-from-archive-git-main.vercel.app",
+      "https://phenomenon-specification-picking-hansen.trycloudflare.com",
+    ],
+    methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+    allowedHeaders: ["Content-Type", "Authorization"],
+    credentials: true,
+  }),
+);
 app.use(express.json());
 
 app.get("/api/health", (_req, res) => {

@@ -1,0 +1,24 @@
+services:
+  - type: web
+    name: duitin-api
+    env: node
+    region: singapore
+    repo: https://github.com/yanayo2000-collab/Duitin
+    branch: main
+    plan: starter
+    buildCommand: npm install
+    startCommand: npm run server
+    autoDeploy: true
+    instances: 1
+    envVars:
+      - key: JWT_SECRET
+        value: "replace-with-your-jwt-secret"
+        sync: true
+      - key: ADMIN_KEY
+        value: "replace-with-your-admin-key"
+        sync: true
+      - key: API_PORT
+        value: "3001"
+        sync: true
+    healthCheckPath: /api/health
+    disk: 1
